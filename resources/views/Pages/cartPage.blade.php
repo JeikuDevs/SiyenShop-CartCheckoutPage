@@ -3,23 +3,23 @@
 @section('content')
     <script src="{{ asset('js/cart.js') }}"></script>
 
-    <div class="container py-5">
+    <div class="container ">
         <div class="row d-flex justify-content-center align-items-center h-100"> 
             <div class="col-11">
                 <div class="d-flex justify-content-start align-items-center mb-2">
                     <img src="{{ asset('images/cart.svg') }}" class="cart-logo mb-2">
                     <h1 class="ms-1 text-primary">Cart</h1>
-                </div>
+                </div>   
 
                 <!-------shirt Sample ------->                
-                <div class="card rounded-3 border-primary mb-4">
+                <div class="card rounded-3 border-primary mb-2">
                     <div class="card-body p-2 d-flex justify-content-between">
                         <div class="d-flex flex-row align-items-center">
                             <div class="p-4 d-flex align-items-left form-check">
                                 <input type="checkbox" class="form-check-input border border-primary checkboxs" 
                                 onclick="AddCheckedProducts()" id="item1" value="350">
                             </div>    
-                            <div>
+                            <div> 
                                 <img src="{{ asset('images/sample-shirt.jpg') }}" class="img-fluid rounded-2 img-items">
                             </div>
                         </div>
@@ -122,41 +122,44 @@
                     </div>
                 </div>
 
-                               <!-- Select All and Checkout Section -->
-                <div class="col-12 mt-5">
-                    <div class="d-flex align-items-center">
-                        <input type="checkbox" id="selectAll" onclick="toggleSelectAll(this)" class="form-check-input border border-primary checkbox-all">
-                        <h5 class="fs-3 fw-bold mb-0 ms-2 mt-1">Select All (<span id="selectAll">2</span>) </h5>
-                    </div>
-                </div>
-
-                <hr>
-
-                <!-- No. of Items and Total Section -->
-                <div class="d-flex justify-content-between align-items-center px-5">
-                    <!-- Item count display -->
-                    <div class="col-2 fw-bold">No. of Items: <span id="item-count" class="fw-bold">0</span> item(s)</div>
-                    
-                    <!-- Total amount display -->
-                    <div>
-                        <span class="ms-5 fw-bold fs-4 col-6">TOTAL: ₱ <span id="total-amount">0.00</span></span>
-                    </div>
-
-                    <!-- Proceed to Checkout button -->
-                    <div>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#ModalProceed" class="btn btn-primary btn-md">
-                            Proceed To Checkout 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div> 
-
+                        <!-- Select All and Checkout Section -->
+                        <div class="col-12 fixed-bottom">
+                            <div class="container px-5 py-4 bg-white">
+                                <div class="col-12 mt-2">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" id="selectAll" onclick="toggleSelectAll(this)" class="form-check-input border border-primary checkbox-all">
+                                        <h5 class="fs-3 fw-bold mb-0 ms-2 mt-1">Select All (<span id="selectAll">2</span>)</h5>
+                                    </div>
+                                </div>
+                        
+                                <hr>
+                        
+                                <!-- No. of Items and Total Section -->
+                                <div class="d-flex justify-content-between align-items-center px-5">
+                                    <!-- Item count display -->
+                                    <div class="col-2 fw-bold">No. of Items: <span id="item-count" class="fw-bold">0</span> item(s)</div>
+                        
+                                    <!-- Total amount display -->
+                                    <div>
+                                        <span class="ms-5 fw-bold fs-4 col-6">TOTAL: ₱ <span id="total-amount">0.00</span></span>
+                                    </div>
+                        
+                                    <!-- Proceed to Checkout button -->
+                                    <div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#ModalProceed" class="btn btn-primary btn-md">
+                                            Proceed To Checkout
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                            </svg>
+                                        </a>
+                                        </div>
+                                 </div>
+                            </div>
+                        </div>
+               
             </div> 
         </div> 
     </div>
-
     <!-- Modal for Proceed to Checkout -->
     @include('Pages.modal.checkoutProceed')
 

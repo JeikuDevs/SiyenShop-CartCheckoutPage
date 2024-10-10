@@ -8,7 +8,7 @@
             <div class="col-11">
                 <div class="d-flex justify-content-start align-items-center mb-2">
                     <img src="{{ asset('images/cart.svg') }}" class="cart-logo mb-2">
-                    <h1 class="ms-1 text-primary">Cart</h1>
+                    <h1 class="ms-1 text-primary fw-bold">Cart</h1>
                 </div>   
 
                 <!-------shirt Sample ------->                
@@ -35,15 +35,15 @@
                             <div class="p-2"><b>Variance/Size</b></div>
                             <div class="p-2">
                                 <select class="form-select border border-primary size-input">
-                                    <option selected>L</option>
-                                    <option>M</option>
-                                    <option>S</option>
-                                    <option>XL</option>
+                                    <option selected>Large</option>
+                                    <option>Medium</option>
+                                    <option>Small</option>
+                                    <option>X-Large</option>
                                 </select>
                             </div>
                         </div>
                         <div class="d-flex align-items-center flex-column">
-                            <div class="p-2"><b>Quantity</b></div>
+                            <div class="p-2"><b>Quantity </b></div>
                             <div class="input-group mt-2 border rounded border-primary" style="overflow: hidden; height: 34px;">
                                 <button class="btn" type="button" onclick="decrementQuantity('quantity_item1')">-</button>
                                 <input id="quantity_item1" min="0" name="quantity" value="1" type="text" readonly
@@ -141,7 +141,7 @@
                         
                                     <!-- Total amount display -->
                                     <div>
-                                        <span class="ms-5 fw-bold fs-4 col-6">TOTAL: ₱ <span id="total-amount">0.00</span></span>
+                                        <span class="ms-5 fw-bold fs-4 col-6">TOTAL: ₱ <span id="total-amount">0</span>.00</span>
                                     </div>
                         
                                     <!-- Proceed to Checkout button -->

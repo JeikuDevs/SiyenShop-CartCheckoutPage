@@ -18,7 +18,7 @@ function AddCheckedProducts() {
             totalQuantity += quantity;  // the total quantity of checked checkbox
         }
     }
-    document.getElementById(TotalAmount).innerHTML = totalValue.toFixed(2);  //set the total amount
+    document.getElementById(TotalAmount).innerHTML = totalValue.toLocaleString('en-US');//set the total amount
     document.getElementById(totalItem).innerHTML = totalQuantity; //set  no. of items of prod.
     
 }
@@ -52,5 +52,4 @@ function toggleSelectAll(selectAllCheckbox) {
     }
     AddCheckedProducts();  // Recalculate total when select all button is checked
 }
-
 

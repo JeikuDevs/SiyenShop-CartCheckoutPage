@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\cartPageController; 
+use App\Http\Controllers\checkOutPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/cartPage', [cartPageController::class, 'index'])->name('cartPage');
+Route::get('/checkOutPage', [checkOutPageController::class, 'index'])->name('checkOutPage');
 
